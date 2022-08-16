@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("https://cdn.discordapp.com/attachments/1008885821027405958/1008889577769029754/IMG_8993-min.png");    
+    background-position: center;
+    background-size: cover;
+}
+
+.page {
+    background-color: rgba(0, 0, 0, 0.75);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(1rem);
+}
+
+.navbar h2 {
+    color: rgb(225, 74, 190);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-left: 100px;
+    letter-spacing: 7px;
+}
+
+.navbar div {
+    margin-right: 100px;
+}
+
+.navbar button {
+    background-color: transparent;
+    border-radius: 10px;
+    border: none;
+    color: rgb(199, 199, 199);
+    cursor: pointer;
+    font-size: 20px;
+    margin-left: 10px;
+    outline: none;
+    padding: 10px;
+    transition: opacity .5s;    
+}
+
+.navbar button:hover {
+    opacity: 0.6;
+    transition: opacity .5s;    
+}
+
+.page-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 104px;
+}
+
+.hello-card {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.hello-card-img {
+    border-radius: 100%;
+    box-shadow: 1px 1px 10px rgb(0, 0, 0);
+    height: 350px;
+    margin-right: 85px;
+    opacity: 0.9;
+    width: 350px;
+}
+
+.hello-card h2 {
+    color: rgb(199, 199, 199);
+    font-size: 50px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+span {
+    color: rgb(225, 74, 190);
+    font-weight: 600;
+    font-style: normal;
+}
+
+.links-card {
+    font-size: 50px;
+    margin-top: 50px;
+}
+
+.links-card i {
+    color: rgb(87, 87, 87);
+    margin: 18px;
+    transition: color .3s;
+}
+
+.links-card i:hover {
+    color: rgb(132, 132, 132);
+    transition: color .3s;
+}
+
+.projects-container {
+    text-align: center;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+.project-container {
+    background-color: #0d1117;
+    border-radius: 10px;
+    color: rgb(188, 188, 188);
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    text-decoration: none;
+    width: 400px;
+}
+
+.project-container h4 {
+    margin-bottom: 10px;
+} 
+
+.project-title {
+    border-radius: 10px;
+    border: 2px solid rgb(225, 74, 190);
+    color: rgb(225, 74, 190);
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+#selected-navitem {
+    background-color: rgb(222, 18, 174);
+    color: #000;
+    font-weight: 600;
+}
