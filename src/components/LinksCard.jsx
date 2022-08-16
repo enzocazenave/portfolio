@@ -5,7 +5,7 @@ const youtube = 'https://www.youtube.com/channel/UCYB-YbAbg8p3d7YMl2XKOvw';
 
 export const LinksCard = () => {
     return (
-        <div className="links-card animate__animated animate__fadeInRightBig">
+        <div className="links-card animate__animated animate__backInRight">
             <a target="blank" href={ linkedin }><i className="fab fa-linkedin"></i></a>
             <a target="blank" href={ github }><i className="fab fa-github"></i></a>
             <a target="blank" href={ instagram }><i className="fab fa-instagram"></i></a>

@@ -10,10 +10,15 @@ export const PortfolioApp = () => {
 
     const [section, setSection] = useState("home");
     const [projects, setProjects] = useState([]);
+    const [isLoading, setIsLoading] = useState(false);
 
     const onSection = (section) => {
         if (section == 'projects') {
-            getRepos().then(res => setProjects(res));
+            setIsLoading(true);
+            getRepos().then((res) => {
+                setProjects(res);
+                setIsLoading(false);
+            });
         }
         setSection(section);
     }
@@ -41,7 +46,7 @@ export const PortfolioApp = () => {
             {
                 (section == 'about') &&
                     <div className="page-item">
-
+                            
                     </div>
             }
             {
@@ -49,10 +54,15 @@ export const PortfolioApp = () => {
                     <div className="page-item">
                         <h1 className="project-title animate__animated animate__fadeIn">Proyectos</h1>
                         <div className="projects-container">
-                            {
-                                projects.map(project => (
-                                    <Project {...project} />
-                                ))
+                            { 
+                                (!isLoading)
+                                ?
+                                    projects.map(project => (
+                                        <Project {...project} />
+                                    ))
+                                : 
+                                    <i className="fas fa-spinner" id="loading-spinner"></i>
+                                
                             }
                         </div>
                     </div>

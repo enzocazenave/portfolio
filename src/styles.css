@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("https://cdn.discordapp.com/attachments/1008885821027405958/1008889577769029754/IMG_8993-min.png");    
+    background-image: url("https://cdn.discordapp.com/attachments/1008885821027405958/1008889577769029754/IMG_8993-min.png");
     background-position: center;
     background-size: cover;
 }
@@ -55,12 +55,12 @@ body {
     margin-left: 10px;
     outline: none;
     padding: 10px;
-    transition: opacity .5s;    
+    transition: opacity .5s;
 }
 
 .navbar button:hover {
     opacity: 0.6;
-    transition: opacity .5s;    
+    transition: opacity .5s;
 }
 
 .page-item {
@@ -122,19 +122,35 @@ span {
 }
 
 .project-container {
+    align-items: center;
     background-color: #0d1117;
     border-radius: 10px;
     color: rgb(188, 188, 188);
-    display: inline-block;
+    display: inline-flex;
+    justify-content: space-evenly;
     margin: 10px;
     padding: 10px;
     text-decoration: none;
+    transition: all .5s;
     width: 400px;
+}
+
+.project-container i {
+    font-size: 30px;
+}
+
+.project-container div {
+    width: 300px;
+}
+
+.project-container:hover {
+    background-color: #1d1d1f;
+    transition: all .5s;
 }
 
 .project-container h4 {
     margin-bottom: 10px;
-} 
+}
 
 .project-title {
     border-radius: 10px;
@@ -150,4 +166,25 @@ span {
     background-color: rgb(222, 18, 174);
     color: #000;
     font-weight: 600;
+}
+
+#loading-spinner {
+    animation-duration: 5000ms;
+    animation-iteration-count: infinite;
+    animation-name: spin;
+    animation-timing-function: linear;
+    color: rgb(225, 74, 190);
+    font-size: 30px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        color: rgb(222, 18, 174)
+    }
+
+    to {
+        transform: rotate(360deg);
+        color: rgb(225, 74, 190);
+    }
 }
