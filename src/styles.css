@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url("https://cdn.discordapp.com/attachments/1008885821027405958/1008889577769029754/IMG_8993-min.png");
+    background-image: url("https://cdn.discordapp.com/attachments/1008885821027405958/1009265593003810847/image_1.png");
     background-position: center;
     background-size: cover;
 }
@@ -30,7 +30,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(1rem);
 }
 
 .navbar h2 {
@@ -68,7 +67,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 104px;
+    margin-top: 90px;
 }
 
 .hello-card {
@@ -117,7 +116,6 @@ span {
 
 .projects-container {
     text-align: center;
-    overflow-y: auto;
     max-height: 600px;
 }
 
@@ -175,6 +173,111 @@ span {
     animation-timing-function: linear;
     color: rgb(225, 74, 190);
     font-size: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 90px;
+    width: 100%;
+}
+
+.contact-item div a {
+    margin: 10px;
+}
+
+.whatsapp {
+    align-items: center;
+    align-items: center;
+    background-color: rgb(24, 24, 24);
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px;
+    text-decoration: none;
+    transition: opacity .4s;
+}
+
+.whatsapp p {
+    color: rgb(222, 18, 174);
+    margin-left: 15px
+}
+
+.whatsapp:hover {
+    opacity: 0.7;
+    transition: opacity .4s;
+}
+
+.whatsapp h3 {
+    color: rgb(222, 18, 174);    
+}
+
+.whatsapp img {
+    width: 30px;
+}
+
+.form-container {
+    width: auto;
+}
+
+.form-container input, .form-container textarea {
+    background-color: rgb(46, 46, 46);
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    display: block;
+    font-size: 17px;
+    margin: 10px;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    width: 600px;
+}
+
+.form-container h2 {
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    color: rgb(222, 18, 174);
+    margin-top: 5px;
+    margin: auto;
+    padding: 8px;
+    text-align: center;
+    width: 600px;
+}
+
+.form-container textarea {
+    height: 150px
+}
+
+.form-container input:focus, .form-container textarea:focus {
+    border-bottom: 2px solid rgb(222, 18, 174);
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.form-container button {
+    background-color: rgb(222, 18, 174);
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+    outline: none;
+    padding: 8px;
+    transition: opacity .3s;
+    width: 600px;
+}
+
+.form-container button:hover {
+    opacity: 0.8;
+    transition: opacity .3s;
+    cursor: pointer;
+}
+
+.error-text {
+    color: rgb(224, 67, 67);
+    text-align: center;
 }
 
 @keyframes spin {
