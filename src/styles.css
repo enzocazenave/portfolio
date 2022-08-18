@@ -70,6 +70,14 @@ body {
     margin-top: 90px;
 }
 
+.page-item footer {
+    color: rgba(87, 87, 87, 0.308);
+    position: fixed;
+    bottom: 3%;
+    text-align: center;
+    margin-top: 150px;
+}
+
 .hello-card {
     align-items: center;
     display: flex;
@@ -200,17 +208,13 @@ span {
 }
 
 .whatsapp p {
-    color: rgb(222, 18, 174);
+    color: rgb(188, 188, 188);
     margin-left: 15px
 }
 
 .whatsapp:hover {
     opacity: 0.7;
     transition: opacity .4s;
-}
-
-.whatsapp h3 {
-    color: rgb(222, 18, 174);    
 }
 
 .whatsapp img {
@@ -278,6 +282,80 @@ span {
 .error-text {
     color: rgb(224, 67, 67);
     text-align: center;
+}
+
+.about-container {
+    color: rgb(188, 188, 188);
+    width: 60%;
+    height: 500px;
+    text-align: center;
+}
+
+.about-container p {
+    font-family: monospace;
+}
+
+.about-container p div {
+    display: flex;
+    justify-content: center;
+}
+
+.about-container p span {
+    color: rgb(222, 18, 174)
+}
+
+.about-container nav {
+    margin-bottom: 20px;
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+}
+
+.about-container nav button {
+    background-color: rgb(24, 24, 24);
+    border-radius: 5px;
+    border: none;
+    color: rgb(188, 188, 188);
+    font-size: 20px;
+    margin-right: 20px;
+    outline: none;
+    padding: 5px;
+    transition: opacity .5s;
+}
+
+.about-container nav button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity .5s;
+}
+
+#selected-aboutnavitem {
+    font-weight: 600;
+    background-color: rgb(222, 18, 174);
+    color: rgb(0, 0, 0);
+}
+
+.about-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 90px;
+    width: 100%;
+}
+
+.about-container p h3 {
+    color: rgb(225, 74, 190);
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.about-container p img {
+    width: 250px;
+    object-fit: cover;
+    margin: 5px 15px 15px 0;
+    border-radius: 5px;
 }
 
 @keyframes spin {

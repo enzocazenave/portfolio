@@ -10,7 +10,8 @@ import Swal from 'sweetalert2';
 const title = "Enzo Cazenave";
 
 const initialState = {
-    subject: '',
+    name: '',
+    email: '',
     message: ''
 }
 
@@ -19,8 +20,9 @@ export const PortfolioApp = () => {
     const [section, setSection] = useState("home");
     const [projects, setProjects] = useState([]);
     const [isLoading, setIsLoading] = useState(false);
-    const { subject, message, onInputChange, formState, onResetForm } = useForm(initialState);
-    const [error, setError] = useState('');
+    const { name, email, message, onInputChange, formState, onResetForm } = useForm(initialState);
+    const [error, setError] = useState(''); 
+    const [aboutSection, setAboutSection] = useState("about-me");
 
     const onSection = (section) => {
         if (section == 'projects') {
@@ -33,11 +35,16 @@ export const PortfolioApp = () => {
         setSection(section);
     }
 
+    const onAboutSection = (section) => {
+        setAboutSection(section)
+    }
+
     const onSendButton = (e) => {
         e.preventDefault();
 
-        if (subject.length < 2) return setError("Debes completar todos los campos");
+        if (name.length < 2) return setError("Debes completar todos los campos");
         if (message.length < 2) return setError("Debes completar todos los campos");
+        if (email.length < 2) return setError("Debe completar todos los campos");
 
         onResetForm();
         setError('');
@@ -78,12 +85,50 @@ export const PortfolioApp = () => {
                     <div className="page-item">
                         <HelloCard />
                         <LinksCard />
+                        <footer className="animate__animated animate__fadeIn animate__slower">
+                            <p>Desarrollado con React JS</p>
+                            <p> Enzo Cazenave &copy;</p>
+                        </footer>
                     </div>
             }
             {
                 (section == 'about') &&
-                    <div className="page-item">
+                    <div className="about-item">
+                        <div className="about-container animate__animated animate__fadeIn">
+                            <nav>
+                                <button onClick={() => onAboutSection('about-me')} id={ (aboutSection == 'about-me') ? 'selected-aboutnavitem' : '' }>Sobre Mi</button>
+                                <button onClick={() => onAboutSection('study')} id={ (aboutSection == 'study') ? 'selected-aboutnavitem' : '' }>Mis estudios</button>
+                                <button onClick={() => onAboutSection('skills')} id={ (aboutSection == 'skills') ? 'selected-aboutnavitem' : '' }>Habilidades</button>
+                                <button onClick={() => onAboutSection('aptitudes')} id={ (aboutSection == 'aptitudes') ? 'selected-aboutnavitem' : '' }>Aptitutes</button>
+                            </nav>
+                            {
+                                (aboutSection == 'about-me') &&
+                                    <p className="animate__animated animate__fadeIn">
+                                        Soy <span>Enzo</span>, un soñador de 18 años, que desde chico le encanta el mundo de la tecnologia.<br/><br/>
+                                        A la edad de los 15 empecé en la programación con un lenguaje llamado Lua, el mismo lo utilizaba para desarrollar
+                                        servidores de FiveM, un juego que estaba muy de moda en ese momento. Ese mismo año me puse el objetivo
+                                        de aprender para poder dar lo mejor a mis usuarios. Aprendí HTML, CSS y JS para poder desarrollar interfaces
+                                        para el servidor que mejoren la experiencia del jugador (usuario).<br/><br/>
+                                        Gracias a tanto esfuerzo y dedicación, llegué a tener una media de 170 usuarios diarios en el servidor. 
+                                        <br/><br/>
+                                        Todo lo mencionado anteriormente, hizo que me diera cuenta a que me quería dedicar. Por eso al finalizar el colegio,
+                                        comencé a estudiar Ingeniería en Informática en UADE (Universidad Argentina de la Empresa).
+                                    </p>
+                            }
+                            {
+                                (aboutSection == 'study') &&
+                                   <p className="animate__animated animate__fadeIn">
+                                        <h3>Ingeniería en informática</h3>
+                                        <ul>Cursando actualmente el segundo cuatrimestre de primer año en UADE.</ul>
+                                        <h3>Cursos</h3>
+                                        <div>
+                                            <img src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965182224699502/UC-6bb1154d-99cb-4a38-847f-a6c90dae55a5.jpg"/>
+                                            <img src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965181973037157/UC-4b8818e0-1f26-442b-85da-d15247c3f22f.jpg"/>
+                                        </div>
+                                   </p>
+                            }
                             
+                        </div>
                     </div>
             }
             {
@@ -133,10 +178,18 @@ export const PortfolioApp = () => {
                             <h2>Contáctame por e-mail</h2>
                             <input 
                                 type="text" 
-                                placeholder="Asunto" 
-                                name="subject"
+                                placeholder="Nombre" 
+                                name="name"
                                 onChange={ onInputChange }
-                                value={ subject }
+                                value={ name }
+                            />
+
+                            <input 
+                                type="email" 
+                                placeholder="Correo electrónico" 
+                                name="email"
+                                onChange={ onInputChange }
+                                value={ email }
                             />
 
                             <textarea 
@@ -157,8 +210,6 @@ export const PortfolioApp = () => {
                                 Enviar
                             </button>
                         </form>
-
-                        
                     </div>
             }
         </div>
