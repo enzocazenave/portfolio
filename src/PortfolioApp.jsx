@@ -93,13 +93,13 @@ export const PortfolioApp = () => {
             }
             {
                 (section == 'about') &&
-                    <div className="about-item">
+                    <div className="about-item animate__animated animate__backInLeft">
                         <div className="about-container animate__animated animate__fadeIn">
                             <nav>
                                 <button onClick={() => onAboutSection('about-me')} id={ (aboutSection == 'about-me') ? 'selected-aboutnavitem' : '' }>Sobre Mi</button>
                                 <button onClick={() => onAboutSection('study')} id={ (aboutSection == 'study') ? 'selected-aboutnavitem' : '' }>Mis estudios</button>
                                 <button onClick={() => onAboutSection('skills')} id={ (aboutSection == 'skills') ? 'selected-aboutnavitem' : '' }>Habilidades</button>
-                                <button onClick={() => onAboutSection('aptitudes')} id={ (aboutSection == 'aptitudes') ? 'selected-aboutnavitem' : '' }>Aptitutes</button>
+                                <button onClick={() => onAboutSection('aptitudes')} id={ (aboutSection == 'aptitudes') ? 'selected-aboutnavitem' : '' }>Aptitudes</button>
                             </nav>
                             {
                                 (aboutSection == 'about-me') &&
@@ -122,10 +122,31 @@ export const PortfolioApp = () => {
                                         <ul>Cursando actualmente el segundo cuatrimestre de primer año en UADE.</ul>
                                         <h3>Cursos</h3>
                                         <div>
-                                            <img src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965182224699502/UC-6bb1154d-99cb-4a38-847f-a6c90dae55a5.jpg"/>
-                                            <img src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965181973037157/UC-4b8818e0-1f26-442b-85da-d15247c3f22f.jpg"/>
+                                            <img className="animate__animated animate__fadeIn" src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965182224699502/UC-6bb1154d-99cb-4a38-847f-a6c90dae55a5.jpg"/>
+                                            <img className="animate__animated animate__fadeIn" src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965181973037157/UC-4b8818e0-1f26-442b-85da-d15247c3f22f.jpg"/>
                                         </div>
                                    </p>
+                            }
+                            {
+                                (aboutSection == 'skills') &&
+                                    <p className="animate__animated animate__fadeIn">
+                                        Python
+                                        - Java Script
+                                        - HTML
+                                        - CSS
+                                        - Lua
+                                        - PHP
+                                        - Swift
+                                        - MySQL
+                                        - Firebase
+                                    </p>
+                            }
+                            {
+                                (aboutSection == 'aptitudes') &&
+                                    <p className="animate__animated animate__fadeIn">
+                                        Responsable - Autodidacta - Compromiso - Fácil aprendizaje 
+
+                                    </p>
                             }
                             
                         </div>
