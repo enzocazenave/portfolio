@@ -130,21 +130,24 @@ export const PortfolioApp = () => {
                             {
                                 (aboutSection == 'skills') &&
                                     <p className="animate__animated animate__fadeIn">
-                                        Python
-                                        - Java Script
-                                        - HTML
-                                        - CSS
-                                        - Lua
-                                        - PHP
-                                        - Swift
-                                        - MySQL
-                                        - Firebase
+                                        <ul> Python</ul>
+                                        <ul> Java Script</ul>
+                                        <ul> HTML</ul>
+                                        <ul> CSS</ul>
+                                        <ul> Lua</ul>
+                                        <ul> PHP</ul>
+                                        <ul> Swift</ul>
+                                        <ul> MySQL</ul>
+                                        <ul> Firebase</ul>
                                     </p>
                             }
                             {
                                 (aboutSection == 'aptitudes') &&
                                     <p className="animate__animated animate__fadeIn">
-                                        Responsable - Autodidacta - Compromiso - Fácil aprendizaje 
+                                        <ul>Responsable</ul>
+                                        <ul>Autodidacta</ul>
+                                        <ul>Compromiso</ul>
+                                        <ul>Fácil aprendizaje</ul>
 
                                     </p>
                             }
