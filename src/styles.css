@@ -351,7 +351,7 @@ span {
     margin-top: 10px;
 }
 
-.about-container p img {
+.about-container p div img {
     width: 250px;
     object-fit: cover;
     margin: 5px 15px 15px 0;
@@ -375,11 +375,64 @@ span {
       flex-direction: column;
     }
 
+    .navbar button {
+        font-size: 15px;
+    }
+
     .navbar h2 {
         margin: 0 0 10px 0;
     }
 
     .navbar div {
         margin: 0;
+    }
+
+    .hello-card-img {
+        width: 200px;
+        height: 200px;
+        margin-right: 15px;
+    }
+
+    .hello-card h2 {
+        font-size: 25px;
+    }
+
+    .about-container {
+        width: 95%;
+    }
+
+    .about-container nav button {
+        font-size: 15px;
+        margin-right: 10px;
+    }
+
+    .about-container p div {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .projects-container {
+        overflow-y: auto;
+    }
+
+    .form-container input, .form-container textarea {
+        width: 350px;
+
+    }
+
+    .form-container h2 {
+        width: 350px;
+        font-size: 17px;
+    }
+
+    .form-container button {
+        width: 350px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
   }
