@@ -292,7 +292,7 @@ span {
 }
 
 .about-container p {
-    font-family: monospace;
+    font-size: 20px;
 }
 
 .about-container p div {
@@ -404,6 +404,10 @@ span {
     .about-container nav button {
         font-size: 15px;
         margin-right: 10px;
+    }
+
+    .about-container p {
+        font-size: 16px;
     }
 
     .about-container p div {

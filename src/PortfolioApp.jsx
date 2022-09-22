@@ -120,25 +120,24 @@ export const PortfolioApp = () => {
                                    <p className="animate__animated animate__fadeIn">
                                         <h3>Ingeniería en informática</h3>
                                         <ul>Cursando actualmente el segundo cuatrimestre de primer año en UADE.</ul>
-                                        <h3>Cursos</h3>
-                                        <div>
-                                            <img className="animate__animated animate__fadeIn" src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965182224699502/UC-6bb1154d-99cb-4a38-847f-a6c90dae55a5.jpg"/>
-                                            <img className="animate__animated animate__fadeIn" src="https://cdn.discordapp.com/attachments/1008885821027405958/1009965181973037157/UC-4b8818e0-1f26-442b-85da-d15247c3f22f.jpg"/>
-                                        </div>
                                    </p>
                             }
                             {
                                 (aboutSection == 'skills') &&
                                     <p className="animate__animated animate__fadeIn">
-                                        <ul> Python</ul>
-                                        <ul> Java Script</ul>
                                         <ul> HTML</ul>
                                         <ul> CSS</ul>
-                                        <ul> Lua</ul>
-                                        <ul> PHP</ul>
-                                        <ul> Swift</ul>
-                                        <ul> MySQL</ul>
+                                        <ul> JavaScript</ul>
+                                        <ul> React JS</ul>
+                                        <ul> Node JS</ul>
+                                        <ul> Socket.io</ul>
+                                        <ul> Mongo DB</ul>
+                                        <ul> Express</ul>
                                         <ul> Firebase</ul>
+                                        <ul> PHP</ul>
+                                        <ul> MySQL</ul>
+                                        <ul> Lua</ul>
+                                        <ul> Python</ul>
                                     </p>
                             }
                             {
@@ -148,7 +147,6 @@ export const PortfolioApp = () => {
                                         <ul>Autodidacta</ul>
                                         <ul>Compromiso</ul>
                                         <ul>Fácil aprendizaje</ul>
-
                                     </p>
                             }
                             

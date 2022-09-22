@@ -7,7 +7,8 @@ export const HelloCard = () => {
 
             <h2>
                 Hola, <br/>
-                Soy <span>Enzo</span>.
+                Soy <span>Enzo</span>. <br />
+                Full Stack Developer.
             </h2>
         </div>
     )
