@@ -97,7 +97,8 @@ export const PortfolioApp = () => {
                         <div className="about-container animate__animated animate__fadeIn">
                             <nav>
                                 <button onClick={() => onAboutSection('about-me')} id={ (aboutSection == 'about-me') ? 'selected-aboutnavitem' : '' }>Sobre Mi</button>
-                                <button onClick={() => onAboutSection('study')} id={ (aboutSection == 'study') ? 'selected-aboutnavitem' : '' }>Mis estudios</button>
+                                <button onClick={() => onAboutSection('study')} id={ (aboutSection == 'study') ? 'selected-aboutnavitem' : '' }>Estudios</button>
+                                <button onClick={() => onAboutSection('experience')} id={ (aboutSection == 'experience') ? 'selected-aboutnavitem' : '' }>Experiencia</button>
                                 <button onClick={() => onAboutSection('skills')} id={ (aboutSection == 'skills') ? 'selected-aboutnavitem' : '' }>Habilidades</button>
                                 <button onClick={() => onAboutSection('aptitudes')} id={ (aboutSection == 'aptitudes') ? 'selected-aboutnavitem' : '' }>Aptitudes</button>
                             </nav>
@@ -121,6 +122,13 @@ export const PortfolioApp = () => {
                                         <h3>Ingeniería en informática</h3>
                                         <ul>Cursando actualmente el segundo cuatrimestre de primer año en UADE.</ul>
                                    </p>
+                            }
+                            {
+                                (aboutSection == 'experience') &&
+                                <p className="animate__animated animate__fadeIn">
+                                    No tengo experiencia laboral profesional o empresarial, solo como FreeLancer.<br/>
+                                    Me gusta aprender y capacitarme todo el tiempo, dispuesto a cumplir con los objetivos, oportunidades y desafíos que me proponen. 
+                                </p>
                             }
                             {
                                 (aboutSection == 'skills') &&
